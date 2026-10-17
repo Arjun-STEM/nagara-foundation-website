@@ -1,0 +1,34 @@
+:root{--indigo:#242B59;--ivory:#F8F4EA;--gold:#F5B544;--char:#292B33;--sage:#879B82;--white:#fff;--r:14px;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 "Noto Sans Devanagari","Segoe UI",system-ui,sans-serif;color:var(--char);background:var(--ivory);overflow-x:hidden}
+h1,h2,h3{color:var(--indigo);line-height:1.2;font-family:Georgia,"Noto Serif Devanagari",serif}
+h1{font-size:clamp(2.2rem,6vw,4rem);margin:.2em 0}h2{font-size:clamp(1.6rem,3.5vw,2.3rem)}
+a{color:var(--indigo)}img{max-width:100%;height:auto}
+.wrap{max-width:var(--max);margin:auto;padding:0 20px}section{padding:56px 0}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{background:var(--white);border-bottom:1px solid #e4dfcf;position:sticky;top:0;z-index:20}
+.bar{display:flex;align-items:center;gap:14px;padding:8px 20px;max-width:var(--max);margin:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}.brand img{height:48px;width:auto}
+nav{margin-left:auto}nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:8px 10px;text-decoration:none;font-size:.92rem;border-radius:8px}
+nav a:hover,nav a[aria-current]{background:var(--ivory)}
+.menu{display:none;margin-left:auto;background:none;border:2px solid var(--indigo);border-radius:8px;padding:8px 12px;min-height:44px;color:var(--indigo)}
+.lang{border:2px solid var(--indigo);background:none;border-radius:8px;padding:6px 10px;min-height:44px;cursor:pointer;color:var(--indigo)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--gold);color:var(--indigo);font-weight:700;text-decoration:none;min-height:44px;border:2px solid var(--gold)}
+.btn.alt{background:none;border-color:var(--indigo)}.btn:hover{filter:brightness(.95)}
+.hero{background:var(--indigo);color:#fff;padding:72px 0}.hero h1,.hero h2{color:#fff}.hero p{max-width:60ch;font-size:1.1rem}
+.hero .btn.alt{border-color:#fff;color:#fff}.eyebrow{color:var(--gold);font-weight:700;letter-spacing:.05em}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fff;border-radius:var(--r);padding:22px;border:1px solid #e4dfcf}.card h3{margin-top:0}
+.badge{display:inline-block;font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:99px;background:#e8eee6;color:#2f4a2b;border:1px solid var(--sage)}
+.ph{background:#fff6dc;border:1px dashed #b58a1d;padding:1px 6px;border-radius:4px}
+.path{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));list-style:none;padding:0}
+.path li{counter-increment:s;background:#fff;border-radius:var(--r);padding:18px;border-top:5px solid var(--gold)}
+.path li:before{content:counter(s);display:block;font:700 1.8rem Georgia;color:var(--sage)}.path b{color:var(--indigo)}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #d8d2bf;padding:8px;text-align:left;vertical-align:top}.scroll{overflow-x:auto}
+.note{border-left:5px solid var(--gold);background:#fff;padding:12px 16px;border-radius:8px}
+footer{background:var(--indigo);color:#e9e6f5;padding:44px 0 20px}footer a{color:#fff}footer ul{list-style:none;padding:0}
+.alt-bg{background:#fff}
+@media(max-width:900px){.menu{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:10px 20px;border-bottom:1px solid #ddd}nav.open{display:block}nav ul{flex-direction:column}.bar{flex-wrap:wrap}.brand span{display:none}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
